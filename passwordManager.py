@@ -94,7 +94,7 @@ def greetUser():
         checkInput()
 
 
-def oAUTH():
+def Login():
     print("Enter Password to Login")
     originalPassword = encodeOriginalPassword()
     enteredPasswordEncode = input()
@@ -109,14 +109,14 @@ def oAUTH():
 
 
 def main():
-    isLoggedIn = oAUTH()
+    isLoggedIn = Login()
     while True:
         if isLoggedIn:
             greetUser()
             break
         else:
             enterPasswordAgain()
-            isLoggedIn = oAUTH()
+            isLoggedIn = Login()
 
 
 main()
